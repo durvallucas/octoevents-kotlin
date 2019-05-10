@@ -1,7 +1,10 @@
 package com.example.octoevents.service
 
-interface IssueService {
-    fun registerEvent()
+import com.example.octoevents.model.dto.EventPayload
+import com.example.octoevents.model.entity.IssueEvent
 
-    fun getIssueEvents(issueNumber: Int)
+interface IssueService {
+    fun registerEvent(eventPayload: EventPayload): IssueEvent
+
+    fun getIssueEvents(issueNumber: Int): List<IssueEvent>
 }
