@@ -1,7 +1,7 @@
 package com.example.octoevents.repository.impl
 
-import com.example.octoevents.dao.IssueEvents
-import com.example.octoevents.dao.Issues
+import com.example.octoevents.database.IssueEvents
+import com.example.octoevents.database.Issues
 import com.example.octoevents.model.IssueEvent
 import com.example.octoevents.repository.IssueEventRepository
 import org.jetbrains.exposed.sql.ResultRow

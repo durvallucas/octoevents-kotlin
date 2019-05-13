@@ -1,6 +1,6 @@
 package com.example.octoevents.repository.impl
 
-import com.example.octoevents.dao.Issues
+import com.example.octoevents.database.Issues
 import com.example.octoevents.model.Issue
 import com.example.octoevents.repository.IssueRepository
 import org.jetbrains.exposed.sql.ResultRow
@@ -13,12 +13,15 @@ import org.springframework.stereotype.Repository
 class IssueRepositoryImpl: IssueRepository {
 
     override fun save(issue: Issue): Issue {
-        issue.id  = Issues.insert {
-            it[id] = getNextId()
+        val nextId = getNextId()
+
+        Issues.insert {
+            it[id] = nextId
             it[number] = issue.number
             it[createdAt] = issue.createdAt
-        } get Issues.id
+        }
 
+        issue.id = nextId
         return issue
     }
 
