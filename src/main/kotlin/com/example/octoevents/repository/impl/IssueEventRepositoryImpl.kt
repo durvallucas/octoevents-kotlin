@@ -9,13 +9,12 @@ import org.jetbrains.exposed.sql.insert
 import org.jetbrains.exposed.sql.select
 import org.jetbrains.exposed.sql.selectAll
 import org.springframework.stereotype.Repository
-import org.springframework.transaction.annotation.Transactional
 
 @Repository
 class IssueEventRepositoryImpl: IssueEventRepository {
 
     override fun save(issueEvent: IssueEvent): IssueEvent {
-        val nextId = getNextId()
+        val nextId = getNextId() //forma incorreta
         IssueEvents.insert {
             it[id] = nextId
             it[action] = issueEvent.action
