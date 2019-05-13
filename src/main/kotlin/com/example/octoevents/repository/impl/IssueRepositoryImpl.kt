@@ -8,8 +8,10 @@ import org.jetbrains.exposed.sql.insert
 import org.jetbrains.exposed.sql.select
 import org.jetbrains.exposed.sql.selectAll
 import org.springframework.stereotype.Repository
+import org.springframework.transaction.annotation.Transactional
 
 @Repository
+@Transactional
 class IssueRepositoryImpl: IssueRepository {
 
     override fun save(issue: Issue): Issue {

@@ -65,6 +65,8 @@ class IssueEventRepositoryImplTest{
             assertTrue(events.contains(issueEvent1))
             assertTrue(events.contains(issueEvent2))
             assertFalse(events.contains(issueEvent3))
+
+            SchemaUtils.drop (Issues, IssueEvents)
         }
 
 

@@ -33,6 +33,8 @@ class IssueRepositoryImplTest{
 
             val issue = repository.findByNumber(2000)
             assertNull(issue)
+
+            SchemaUtils.drop (Issues)
         }
     }
 
@@ -53,6 +55,8 @@ class IssueRepositoryImplTest{
 
             val issue = repository.findByNumber(1000)
             assertEquals(issue1.number, issue?.number)
+
+            SchemaUtils.drop (Issues)
         }
     }
 }
