@@ -3,7 +3,7 @@
 Octo Events é uma aplicação que escuta e registra eventos GitHub via webhooks e permite consultar os eventos registrados.
 
 ## Tecnologia
-O Octo Events foi implementado em Kotlin com suporte do Spring Boot 2 e Exposed.
+O Octo Events foi implementado em Kotlin 1.3.31 com suporte do Spring Boot 2 e Exposed.
 
 ## Ferramentas
 Para implementação da aplicação, foi utilizado o IntlliJ IDEA 2019.1.2
