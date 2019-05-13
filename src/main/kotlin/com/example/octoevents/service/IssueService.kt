@@ -1,7 +1,7 @@
 package com.example.octoevents.service
 
-import com.example.octoevents.model.dto.EventPayload
-import com.example.octoevents.model.entity.IssueEvent
+import com.example.octoevents.model.payload.EventPayload
+import com.example.octoevents.model.IssueEvent
 
 
 interface IssueService {

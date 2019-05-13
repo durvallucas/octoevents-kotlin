@@ -1,7 +1,7 @@
 package com.example.octoevents.resource
 
-import com.example.octoevents.model.dto.EventPayload
-import com.example.octoevents.model.entity.IssueEvent
+import com.example.octoevents.model.payload.EventPayload
+import com.example.octoevents.model.IssueEvent
 import com.example.octoevents.service.IssueService
 import org.springframework.beans.factory.annotation.Autowired
 import org.springframework.http.HttpStatus
