@@ -14,13 +14,15 @@ import org.springframework.stereotype.Repository
 class IssueEventRepositoryImpl: IssueEventRepository {
 
     override fun save(issueEvent: IssueEvent): IssueEvent {
-        issueEvent.id = IssueEvents.insert {
-            it[id] = getNextId()
+        val nextId = getNextId()
+        IssueEvents.insert {
+            it[id] = nextId
             it[action] = issueEvent.action
             it[createdAt] = issueEvent.createdAt
             it[issue] = issueEvent.issue.id
-        } get IssueEvents.id
+        }
 
+        issueEvent.id = nextId
         return issueEvent
     }
 
