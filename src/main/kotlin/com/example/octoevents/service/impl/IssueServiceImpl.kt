@@ -33,6 +33,7 @@ class IssueServiceImpl : IssueService {
         return newIssueEvent
     }
 
+    @Transactional
     override fun getIssueEvents(issueNumber: Int): List<IssueEvent> {
         return issueEventRepository.findByIssueNumber(issueNumber)
     }

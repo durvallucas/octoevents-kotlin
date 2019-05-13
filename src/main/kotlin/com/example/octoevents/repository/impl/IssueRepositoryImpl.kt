@@ -11,7 +11,6 @@ import org.springframework.stereotype.Repository
 import org.springframework.transaction.annotation.Transactional
 
 @Repository
-@Transactional
 class IssueRepositoryImpl: IssueRepository {
 
     override fun save(issue: Issue): Issue {
